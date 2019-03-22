@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+html,body {
+	margin:0;padding:0;
+	font-size: 14px;
+	font-family: 'Lato', 'Noto Sans KR', sans-serif;
+
+}
+html {
+	background: #F6F6F6
+}
+* {
+	margin:0;padding:0
+}
+ul,li,ol {
+	list-style: none
+}
+a {
+	text-decoration: none;
+	display: block;
+}
+.floatClear:after {
+	display: block;
+	content:"";
+	clear: both
+}
+.fL {
+	float:left
+}
+.fR {
+	float:right
+}
+.pl-30 {
+	padding-left: 30px
+}
+.pr-30 {
+	padding-right: 30px
+}
+/* 그 외 css */
+.titleWrap h2.Title {
+	font-weight: bold;
+	font-size: 60px;
+	display: block
+}
+.titleWrap .subTitle {
+	color:#747474;
+	font-size: 14px
+}
