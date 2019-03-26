@@ -41,9 +41,9 @@ export default {
 	padding:50px 0 30px
 }
 .inner {
-	max-width: 1920px;
-	margin:0 auto;
-	padding:0 30px
+	/* max-width: 1920px;
+	margin:0 auto; */
+	padding:0 2.5vw
 }
 .right {
 	text-align: right

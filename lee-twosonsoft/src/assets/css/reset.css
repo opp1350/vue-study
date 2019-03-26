@@ -4,7 +4,6 @@ html,body {
 	margin:0;padding:0;
 	font-size: 14px;
 	font-family: 'Lato', 'Noto Sans KR', sans-serif;
-
 }
 html {
 	background: #F6F6F6
@@ -46,3 +45,8 @@ a {
 	color:#747474;
 	font-size: 14px
 }
+/* @media screen and (min-width:1600px){
+	* {
+		font-size: 1.3rem
+	}
+} */

@@ -5,6 +5,8 @@
 		<div class="appInner">
 			<mainSolution/>
 			<mainproject/>
+			<mainNews/>
+			<mainclients/>
 		</div>
 		<mainFooter/>
 	</div>
@@ -16,6 +18,8 @@ import mainSlide from './components/ImgSlide.vue'
 import mainSolution from './components/Solution.vue'
 import mainproject from './components/project.vue'
 import mainFooter from './components/footer.vue'
+import mainNews from './components/News.vue'
+import mainclients from './components/clients.vue'
 import style from './assets/css/reset.css'
 
 export default {
@@ -26,6 +30,8 @@ export default {
 		mainSolution,
 		mainproject,
 		mainFooter,
+		mainNews,
+		mainclients
 	}
 }
 </script>

@@ -53,9 +53,9 @@ export default {
 	clear: both;
 }
 .gnb .inner {
-	max-width: 1920px;
-	margin:0 auto;
-	padding:0 30px;
+	/* max-width: 1920px;
+	margin:0 auto; */
+	padding:0 2.5vw;
 	border-bottom:1px solid rgba(255,255,255,0.4)
 }
 .gnb h1 {
