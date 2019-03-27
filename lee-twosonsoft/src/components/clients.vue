@@ -8,7 +8,7 @@
 			</div>
 			<div class="clientsItem content">
 				<ul class="clientsList floatClear">
-					<li class="clientsListItems" v-for="item in items" :key="item.key"><img src="" alt=""></li>
+					<li class="clientsListItems" v-for="item in items" :key="item.key"><img :src="item.img" :alt="item.imgAlt"></li>
 				</ul>
 			</div>
 		</div>
@@ -22,22 +22,28 @@ export default {
 		return {
 			items: [
 				{
-				
+					img: require('@/assets/img/lotte_grey_70.png'),
+					imgAlt: 'lotte'
 				},
 				{
-				
+					img: require('@/assets/img/cjHello_grey_70.png'),
+					imgAlt: 'cjHello'
 				},
 				{
-				
+					img: require('@/assets/img/ss_grey_70.png'),
+					imgAlt: '삼성생명'
 				},
 				{
-				
+					img: require('@/assets/img/ss_grey_70.png'),
+					imgAlt: '로고4'
 				},
 				{
-				
+					img: require('@/assets/img/ss_grey_70.png'),
+					imgAlt: '로고5'
 				},
 				{
-				
+					img: require('@/assets/img/ss_grey_70.png'),
+					imgAlt: '로고6'
 				},
 			]
 		}
@@ -55,11 +61,9 @@ export default {
 .clientsItem.titleWrap {
 	flex-direction: column;
 	width:25%;
-	border:1px solid darkcyan
 }
 .clientsItem.content {
 	flex: 1;
-	border:1px solid darkorchid
 }
 .clientsListItems {
 	width:33.3332%;
@@ -67,5 +71,15 @@ export default {
 	box-sizing: border-box;
 	float:left;
 	height: calc(12.25vw - 1.25vw);
+	position:relative
+}
+.clientsListItems img {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	width:60%;
+	max-width:200px;
+	height: auto;
 }
 </style>

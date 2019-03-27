@@ -93,15 +93,15 @@ export default {
 	display: block
 }
 .rightInner {
-	background:none;
-	transition: 0.3s all;
+	/* background:none;
+	transition: 0.3s all; */
 	display:block;
 	width:100%;
 	height:100%
 }
-.rightInner:hover {
-	background: linear-gradient(to top, #1E1E47, rgba(255,255,255,0))
-}
+/* .rightInner:hover {
+	background: linear-gradient(to top, rgba(73,73,105,0.8), rgba(255,255,255,0));
+} */
 a.inner {
 	position: relative;
 	width:100%;

@@ -45,8 +45,13 @@ a {
 	color:#747474;
 	font-size: 14px
 }
-/* @media screen and (min-width:1600px){
-	* {
-		font-size: 1.3rem
-	}
-} */
+.borderBtn {
+	background:rgba(255,255,255,0.3);
+	border: 1px solid rgba(0,0,0,0.6);
+	width:130px;
+	padding: 2px 0;
+	transition: 0.5s all	
+}
+.borderBtn:hover {
+	background:rgba(255,255,255,0.6)
+}

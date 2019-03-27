@@ -4,12 +4,59 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/src/assets/css/reset.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/src/assets/css/reset.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <title>lee-twosonsoft</title>
   </head>
   <body>
     <div id="app">
     </div>
-    <!-- built files will be auto injected -->
   </body>
+  <!-- 메뉴 스크롤 감지 이벤트 -->
+  <script>
+    $(function(){
+      var gnbHeight = $('.gnb').innerHeight();
+      var imgSlideHeight = $('.imgsliderWrap').innerHeight();
+      var scollHeight = imgSlideHeight - gnbHeight;
+      $('h1.mainLogo img.default').addClass('show');
+      console.log(scollHeight);
+      $(window).scroll(function(){
+        var position = $(this).scrollTop();
+        if (scollHeight <= position) {
+          $('.gnb').css("background-color","#F6F6F6");
+          $('.gnb a').css("color","#000");
+          $('.gnb .inner').css("border-bottom","1px solid rgba(0,0,0,0.4)");
+          $('h1.mainLogo img').removeClass('show');
+          $('h1.mainLogo img.black').addClass('show');
+        } else {
+          $('.gnb').css("background-color","rgba(255,255,255,0)");
+          $('.gnb a').css("color","rgba(255,255,255,0.6)");
+          $('.gnb .inner').css("border-bottom","1px solid rgba(255,255,255,0.2)");
+          $('h1.mainLogo img').removeClass('show');
+          $('h1.mainLogo img.default').addClass('show');
+        }
+      });
+    });
+  </script>
+  <!-- 트윈맥스 연습 왜 안됨-->
+  <script>
+    $(function(){
+      var tg = $('div.projectContRight .rightInner');
+      var color = {
+        top:"rgba(73,73,105,0)",bottom:"rgba(73,73,105,0)"
+      };
+      var gradient = TweenMax.to(color, 1, {colorProps:{top:"rgba(73,73,105,0)", bottom:"rgba(73,73,105,0.8)"}, onUpdate:colorize, ease:Linear.easeNone});
+      function colorize(){
+        tg.css("background","linear-gradient(to top, " + color.top + ","+ color.top + ");");
+      };
+      tg.hover(over,out);
+        function over(){
+          gradient.play();
+        };
+        function out(){
+          gradient.reverse();
+        };
+    });
+  </script>
 </html>
