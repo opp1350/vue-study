@@ -43,7 +43,8 @@ export default {
 .inner {
 	/* max-width: 1920px;
 	margin:0 auto; */
-	padding:0 2.5vw
+	padding:0 2.5vw;
+	color:#999;
 }
 .right {
 	text-align: right

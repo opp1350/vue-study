@@ -7,6 +7,8 @@
     <!-- <link rel="stylesheet" type="text/css" href="/src/assets/css/reset.css"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ColorPropsPlugin.min.js"></script>
+    
     <title>lee-twosonsoft</title>
   </head>
   <body>
@@ -39,16 +41,20 @@
       });
     });
   </script>
-  <!-- 트윈맥스 연습 왜 안됨-->
+  <!-- tweenMax practice-->
   <script>
     $(function(){
+      //background linear-gradient animation : not working**
       var tg = $('div.projectContRight .rightInner');
+      console.log(tg);
       var color = {
         top:"rgba(73,73,105,0)",bottom:"rgba(73,73,105,0)"
       };
-      var gradient = TweenMax.to(color, 1, {colorProps:{top:"rgba(73,73,105,0)", bottom:"rgba(73,73,105,0.8)"}, onUpdate:colorize, ease:Linear.easeNone});
+      var gradient = TweenMax.to(color, 1, {
+        colorProps:{top:"rgba(73,73,105,0)", bottom:"rgba(73,73,105,0.8)"}, onUpdate:colorize, ease:Linear.easeNone
+        });
       function colorize(){
-        tg.css("background","linear-gradient(to top, " + color.top + ","+ color.top + ");");
+        tg.css("background","linear-gradient(to top, " + color.bottom + ","+ color.top + ");");
       };
       tg.hover(over,out);
         function over(){
@@ -57,6 +63,35 @@
         function out(){
           gradient.reverse();
         };
+      //opacity animation
+
+      //project
+      $('.projectWrap a.inner').hover(proOpa1,proOpaDefault);
+      function proOpa1(){
+        TweenMax.to($(this).find('.projectContLeftItemImg img'),.3,{opacity:1})
+      };
+      function proOpaDefault(){
+        TweenMax.to($(this).find('.projectContLeftItemImg img'),.3,{opacity:0.5})
+      };
+
+      //solution : first 
+      var solTg = $('.solutionItem.content');
+      $('.solutionItem.content').hover(solOpa1,solOpaDefault);
+      function solOpa1(){
+        TweenMax.to($(this).find('span.arrow'),.3,{opacity:1})
+      };
+      function solOpaDefault(){
+        TweenMax.to($(this).find('span.arrow'),.3,{opacity:0})
+      };
+
+      // 2nd
+      $('.solutionItem.content.bg a.goToPilot').hover(solAni,solAniDefault);
+      function solAni(){
+        TweenMax.to($(this).find('span.arrow'),.2,{x:8})
+      };
+      function solAniDefault(){
+        TweenMax.to($(this).find('span.arrow'),.2,{x:0})
+      };
     });
   </script>
 </html>

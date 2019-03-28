@@ -3,7 +3,7 @@
 		<div class="clientsItemWrap">
 			<div class="clientsItem titleWrap">
 				<h2 class="Title">Our Clients</h2>
-				<p class="subTitle">두손소프트는 국내 유수기업의 사업컨설팅과 함께 신규사업,<br>
+				<p class="subTitle">두손소프트는 국내 유수기업의 사업컨설팅과 함께 신규사업,
 				개발사업, 혁신사업 등 다양한 프로젝트 구축 경험이 있습니다.</p>
 			</div>
 			<div class="clientsItem content">
@@ -67,7 +67,6 @@ export default {
 }
 .clientsListItems {
 	width:33.3332%;
-	border: 1px dashed darkorange;
 	box-sizing: border-box;
 	float:left;
 	height: calc(12.25vw - 1.25vw);
@@ -79,7 +78,7 @@ export default {
 	left:50%;
 	transform: translate(-50%,-50%);
 	width:60%;
-	max-width:200px;
+	max-width:180px;
 	height: auto;
 }
 </style>
