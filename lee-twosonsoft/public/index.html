@@ -26,9 +26,9 @@
       $(window).scroll(function(){
         var position = $(this).scrollTop();
         if (scollHeight <= position) {
-          $('.gnb').css("background-color","#F6F6F6");
+          $('.gnb').css("background-color","#fff");
           $('.gnb a').css("color","#000");
-          $('.gnb .inner').css("border-bottom","1px solid rgba(0,0,0,0.4)");
+          $('.gnb .inner').css("border-bottom","1px solid rgba(0,0,0,0)");
           $('h1.mainLogo img').removeClass('show');
           $('h1.mainLogo img.black').addClass('show');
         } else {
@@ -68,7 +68,7 @@
       //project
       $('.projectWrap a.inner').hover(proOpa1,proOpaDefault);
       function proOpa1(){
-        TweenMax.to($(this).find('.projectContLeftItemImg img'),.3,{opacity:1})
+        TweenMax.to($(this).find('.projectContLeftItemImg img'),.3,{opacity:0.8})
       };
       function proOpaDefault(){
         TweenMax.to($(this).find('.projectContLeftItemImg img'),.3,{opacity:0.5})
@@ -90,6 +90,23 @@
         TweenMax.to($(this).find('span.arrow'),.2,{x:8})
       };
       function solAniDefault(){
+        TweenMax.to($(this).find('span.arrow'),.2,{x:0})
+      };
+      //news hover event
+      // 1st
+      $('.leftNewsItems').hover(newsOpa1,newsOpaDefault);
+      function newsOpa1(){
+        TweenMax.to($(this).find('a.newsLink'),.3,{opacity:1})
+      };
+      function newsOpaDefault(){
+        TweenMax.to($(this).find('a.newsLink'),.3,{opacity:0})
+      };
+      //2nd
+      $('.leftNewsItems a.newsLink').hover(newsAni,newsAniDefault);
+      function newsAni(){
+        TweenMax.to($(this).find('span.arrow'),.2,{x:8})
+      };
+      function newsAniDefault(){
         TweenMax.to($(this).find('span.arrow'),.2,{x:0})
       };
     });

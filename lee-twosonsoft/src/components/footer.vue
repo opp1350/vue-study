@@ -3,7 +3,11 @@
 		<div class="inner floatClear">
 			<div class="left fL">
 				<ul class="footerMenu">
-					<li><a href="#none">{{}}</a></li>
+					<li v-for="item in footerList" :key="item.key">
+						<a v-bind:href="item.link" target="_blank">
+							{{item.list}}
+						</a>
+					</li>
 				</ul>
 				<p class="copyRight">TWOSONSOFT. All Rights Reserved</p>
 			</div>
@@ -29,6 +33,20 @@ export default {
 				{
 					info:'전화 : 02-3461-8686 팩스 : 070-8677-5460 이메일 : twosonsoft@twosonsoft.com'
 				},
+			],
+			footerList : [
+				{
+					 list: '프로젝트 문의',
+					 link: 'https://www.naver.com/'
+				},
+				{
+					 list: '입사지원',
+					 link: 'https://www.google.co.kr/?hl=ko'
+				},
+				{
+					 list: '회사소개서 받기',
+					 link: 'https://www.youtube.com/?gl=KR&hl=ko'
+				}
 			]
 		}
 	}
@@ -36,17 +54,36 @@ export default {
 </script>
 
 <style scoped>
+* {
+	line-height: 24px;
+	font-size: 12px
+}
 .footer {
 	background:#EEEEF2;
-	padding:50px 0 30px
+	padding:40px 0 30px
 }
 .inner {
-	/* max-width: 1920px;
-	margin:0 auto; */
 	padding:0 2.5vw;
-	color:#999;
+	color:#777;
+}
+ul {
+	margin-bottom:30px
+}
+li {
+	display: inline-block;
+	margin-right: 20px
+}
+li:last-child {
+	margin-right:0
 }
 .right {
 	text-align: right
+}
+a {
+	color:#777
+}
+a:hover {
+	text-decoration: underline;
+	color:#333
 }
 </style>

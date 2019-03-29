@@ -17,19 +17,13 @@
 				</div>
 			</div>
 			<div class="left">
-				<div class="leftNewsItems">
-					<a href="#none" title="더 자세히 보기">
-						<h4>제목</h4>
-						<p>날짜</p>
-						<p class="hashtag">두손스토리</p>
-					</a>
-				</div>
-				<div class="leftNewsItems">
-					<a href="#none" title="더 자세히 보기">
-						<h4>제목</h4>
-						<p>날짜</p>
-						<p class="hashtag">두손스토리</p>
-					</a>
+				<div class="leftNewsItems" v-for="item in items" :key="item.key">
+					<div class="titleWrap">
+						<h4 class="title">{{ item.title }}</h4>
+						<p class="date-b">{{ item.date }}</p>
+						<a v-bind:href="item.link" title="더 자세히 보기" target="_blank" class="newsLink">더 자세히 보기<span class="arrow"></span></a>
+					</div>
+						<p class="hashtag">{{ item.hashtag }}</p>
 				</div>
 			</div>
 		</div>
@@ -43,13 +37,16 @@ export default {
 		return {
 			items: [
 				{
-				
+				title:'저작권 등록증',
+				date:'2017 / 08 / 30',
+				hashtag:'#두손스토리',
+				link:'http://www.twosonsoft.com/news/news_sub01.do?menuType=2&listNum=287'
 				},
 				{
-				
-				},
-				{
-				
+				title:'IoT 보안, 헬스케어 분야로 확장.. 특화 테스트 환경 마련',
+				date:'2017 / 08 / 30',
+				hashtag:'#IT News',
+				link:'http://www.twosonsoft.com/news/news_sub01.do?menuType=2&listNum=286'
 				},
 			]
 		}
@@ -125,6 +122,8 @@ export default {
 	width:100%;
 	height: calc(25vw - 1.25vw);
 	box-sizing: border-box;
+	position: relative;
+	padding:2vw;
 }
 .leftNewsItems:first-of-type {
 	background: #fff
@@ -132,8 +131,31 @@ export default {
 .leftNewsItems:nth-of-type(2) {
 	background: #e6e6e6
 }
-.leftNewsItems a {
-	display: block;
-
-} 
+.leftNewsItems div.titleWrap {
+	position:absolute;
+	width:calc(100% - 5vw);
+}
+.leftNewsItems div.titleWrap .title {
+	margin-bottom:10px
+}
+.leftNewsItems p.hashtag {
+	position: absolute;
+	bottom:2.5vw;
+	right:2.5vw
+}
+a.newsLink {
+	position: relative;
+	opacity:0;
+	margin-top:10px
+}
+span.arrow {
+	width:25px;
+	height:12px;
+	position: absolute;
+	bottom:0;
+	margin-left:5px;
+	background: url("../assets/img/arrow.png") 0 0 no-repeat;
+	background-size: contain;
+	opacity:1
+}
 </style>

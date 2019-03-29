@@ -145,12 +145,10 @@ a {
 	line-height: 24px;
 	position: absolute;
 	z-index: 1;
-	bottom:5vw
+	bottom:5vw;
+	width:calc(100% - 10vw)
 }
 .projectConrRightItemContWrap 
-/* .rightInner:hover {
-	background: linear-gradient(to top, rgba(73,73,105,0.8), rgba(255,255,255,0));
-} */
 h4.title {
 	font-size: 16px;
 	margin-bottom:10px
@@ -171,19 +169,27 @@ a.inner {
 	position: relative;
 	width:100%;
 	height: 100%;
-	padding:10%;
+	padding:2.5vw;
 	box-sizing: border-box;
 	display: block;
 	color:#333;
 	transition: 0.3s all;
 	background: #fff
 }
+.projectContLeftItem:nth-of-type(2) a.inner {
+	background: none 
+}
+.projectContLeftItem:nth-of-type(3) a.inner {
+	background: #E8EDF4
+}
 a.inner:hover {
-	background: none
+	background: none !important
 }
 .projectContLeftItemName {
 	position:absolute;
 	bottom:10%;
+	z-index: 1;
+	width:calc(100% - 5vw)
 }
 p.bold {
 	font-weight: bold;
@@ -217,7 +223,4 @@ p.bold::after {
 a.inner:hover .projectContLeftItemImg {
 	width:73%;
 }
-/* a.inner:hover .projectContLeftItemImg img {
-	opacity: 1;
-} */
 </style>
