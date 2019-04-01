@@ -35,17 +35,17 @@
         if (scollHeight <= position) {
           $('.gnb').css("background-color","#fff");
           $('.gnb a').css("color","#000");
-          $('.gnb .inner').css("border-bottom","1px solid rgba(0,0,0,0)");
+          $('.gnb .inner').css({"border-bottom":"1px solid rgba(0,0,0,0)","padding":"0 2.5vw"});
           $('h1.mainLogo img').removeClass('show');
           $('h1.mainLogo img.black').addClass('show');
         } else {
           $('.gnb').css("background-color","rgba(255,255,255,0)");
           $('.gnb a').css("color","rgba(255,255,255,0.6)");
-          $('.gnb .inner').css("border-bottom","1px solid rgba(255,255,255,0.2)");
+          $('.gnb .inner').css({"border-bottom":"1px solid rgba(255,255,255,0)","padding":"0 5vw"});
           $('h1.mainLogo img').removeClass('show');
           $('h1.mainLogo img.default').addClass('show');
         }
-      }
+      };
       $(window).scroll(function(){
         gnbStyleChange ();
       });
@@ -141,7 +141,6 @@
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-
     })  
   });
   </script>

@@ -58,11 +58,10 @@ export default {
 	clear: both;
 }
 .gnb .inner {
-	/* max-width: 1920px;
-	margin:0 auto; */
-	padding:0 2.5vw;
+	padding:0 5vw;
 	height: 100%;
-	border-bottom:1px solid rgba(255,255,255,0.4)
+	box-sizing: border-box
+	/* border-bottom:1px solid rgba(255,255,255,0.4) */
 }
 .gnb h1 {
 	float: left;
