@@ -37,16 +37,16 @@ export default {
 		return {
 			items: [
 				{
-				title:'저작권 등록증',
-				date:'2017 / 08 / 30',
-				hashtag:'#두손스토리',
-				link:'http://www.twosonsoft.com/news/news_sub01.do?menuType=2&listNum=287'
+					title:'저작권 등록증',
+					date:'2017 / 08 / 30',
+					hashtag:'#두손스토리',
+					link:'http://www.twosonsoft.com/news/news_sub01.do?menuType=2&listNum=287'
 				},
 				{
-				title:'IoT 보안, 헬스케어 분야로 확장.. 특화 테스트 환경 마련',
-				date:'2017 / 08 / 30',
-				hashtag:'#IT News',
-				link:'http://www.twosonsoft.com/news/news_sub01.do?menuType=2&listNum=286'
+					title:'IoT 보안, 헬스케어 분야로 확장.. 특화 테스트 환경 마련',
+					date:'2017 / 08 / 30',
+					hashtag:'#IT News',
+					link:'http://www.twosonsoft.com/news/news_sub01.do?menuType=2&listNum=286'
 				},
 			]
 		}

@@ -36,18 +36,20 @@ export default {
 			],
 			footerList : [
 				{
-					 list: '프로젝트 문의',
-					 link: 'https://www.naver.com/'
+					list: '프로젝트 문의',
+					link: 'https://www.naver.com/'
 				},
 				{
-					 list: '입사지원',
-					 link: 'https://www.google.co.kr/?hl=ko'
+					list: '입사지원',
+					link: 'https://www.google.co.kr/?hl=ko'
 				},
 				{
-					 list: '회사소개서 받기',
-					 link: 'https://www.youtube.com/?gl=KR&hl=ko'
+					list: '회사소개서 받기',
+					link: 'https://www.youtube.com/?gl=KR&hl=ko'
 				}
 			]
+
+			
 		}
 	}
 }

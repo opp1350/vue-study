@@ -8,7 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ColorPropsPlugin.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
     <title>lee-twosonsoft</title>
   </head>
   <body>
@@ -18,12 +19,18 @@
   <!-- 메뉴 스크롤 감지 이벤트 -->
   <script>
     $(function(){
-      var gnbHeight = $('.gnb').innerHeight();
-      var imgSlideHeight = $('.imgsliderWrap').innerHeight();
-      var scollHeight = imgSlideHeight - gnbHeight;
       $('h1.mainLogo img.default').addClass('show');
-      console.log(scollHeight);
-      $(window).scroll(function(){
+      // console.log(scollHeight);
+      $(window).resize(function(){
+        // var gnbHeight = $('.gnb').innerHeight();
+        // var imgSlideHeight = $('.sliderAllWrap').innerHeight();
+        // var scollHeight = imgSlideHeight - gnbHeight;
+        gnbStyleChange();
+      });
+      function gnbStyleChange (){
+        var gnbHeight = $('.gnb').innerHeight();
+        var imgSlideHeight = $('.sliderAllWrap').innerHeight();
+        var scollHeight = imgSlideHeight - gnbHeight;
         var position = $(this).scrollTop();
         if (scollHeight <= position) {
           $('.gnb').css("background-color","#fff");
@@ -38,6 +45,9 @@
           $('h1.mainLogo img').removeClass('show');
           $('h1.mainLogo img.default').addClass('show');
         }
+      }
+      $(window).scroll(function(){
+        gnbStyleChange ();
       });
     });
   </script>
@@ -109,6 +119,30 @@
       function newsAniDefault(){
         TweenMax.to($(this).find('span.arrow'),.2,{x:0})
       };
+      sliderHeight()
+      $(window).resize(function(){
+        sliderHeight()
+      });
+      function sliderHeight() {
+        var windowH = $(window).height();
+        console.log(windowH);
+        $('.imgSlider').css("height",windowH)
+      };
     });
+  </script>
+  <!-- slider API -->
+  <script>
+  $(function(){
+      var mySwiper = new Swiper ('.swiper-container', {
+      // loop: true,
+      effect: 'fade',
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+    })  
+  });
   </script>
 </html>

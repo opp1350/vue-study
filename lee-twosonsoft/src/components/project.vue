@@ -100,7 +100,6 @@ a {
 }
 .projectContLeft,
 .projectContRight {
-	/* border:1px solid #f0c; */
 	box-sizing: border-box
 }
 .projectContLeft {

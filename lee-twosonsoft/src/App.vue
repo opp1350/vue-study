@@ -38,8 +38,6 @@ export default {
 
 <style>
 .appInner {
-	/* max-width: 1920px;
-	margin:0 auto 100px; */
 	padding:0 2.5vw
 }
 </style>
