@@ -66,11 +66,11 @@
 	</div>
 </template>
 <script>
-export default {
-	name: 'mainSlide',
-	props: {
-	}
-}
+// export default {
+// 	name: 'mainSlide',
+// 	props: {
+// 	}
+// }
 </script>
 
 <style scoped>

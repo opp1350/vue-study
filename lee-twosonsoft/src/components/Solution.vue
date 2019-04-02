@@ -57,7 +57,7 @@ export default {
 	width:25%;
 }
 .solutionItem.content {
-	min-height:calc(25vw - 1.25vw) ;
+	min-height:calc(25vw - 1.25vw);
 	box-sizing: border-box;
 	padding:2.5vw;
 	transition: 0.3s all;
@@ -128,5 +128,35 @@ h4.solutionItemTitle {
 }
 .bg:last-of-type:hover {
 	background-image: url("../assets/img/3_hover.png");
+}
+@media screen and (max-width:950px) {
+	.solutionItemCont:nth-of-type(2) {
+		display: none
+	}
+	.bg:nth-of-type(2),.bg:nth-of-type(3),.bg:last-of-type {
+		background-position: 100% 45%;
+	}
+}
+@media screen and (max-width:1260px) {
+	.solutionWrap {
+		margin:70px auto;
+	}
+	.solutionItemWrap {
+		display: block
+	}
+	.solutionItemWrap:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.solutionItem.titleWrap {
+		width:100%;
+		margin-bottom: 2.5vw
+	}
+	.solutionItem.content {
+		float: left;
+		width:33.3332%;
+		min-height:calc(33vw - 1.25vw);
+	}
 }
 </style>

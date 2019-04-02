@@ -158,4 +158,9 @@ span.arrow {
 	background-size: contain;
 	opacity:1
 }
+@media screen and (max-width:1260px) {
+	.NewsWrap {
+		margin-bottom:70px
+	}
+}
 </style>

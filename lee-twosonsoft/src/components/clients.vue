@@ -4,7 +4,7 @@
 			<div class="clientsItem titleWrap">
 				<h2 class="Title">Our Clients</h2>
 				<p class="subTitle">두손소프트는 국내 유수기업의 사업컨설팅과 함께 신규사업,
-				개발사업, 혁신사업 등 다양한 프로젝트 구축 경험이 있습니다.</p>
+개발사업, 혁신사업 등 다양한 프로젝트 구축 경험이 있습니다.</p>
 				<div class="btnWrap">
 					<span>...end you!</span><button type="button" class="borderBtn">프로젝트 문의</button>
 				</div>
@@ -12,6 +12,7 @@
 			<div class="clientsItem content">
 				<ul class="clientsList floatClear">
 					<li class="clientsListItems" v-for="item in items" :key="item.key"><img :src="item.img" :alt="item.imgAlt"></li>
+					<li class="clientsListItems ifWidth1800px" v-for="item in itemsIf1800px" :key="item.key"><img :src="item.img" :alt="item.imgAlt"></li>
 				</ul>
 			</div>
 		</div>
@@ -48,6 +49,16 @@ export default {
 					img: require('@/assets/img/lotte_grey_70.png'),
 					imgAlt: 'lotte'
 				},
+			],
+			itemsIf1800px : [
+				{
+					img: require('@/assets/img/lotte_grey_70.png'),
+					imgAlt: 'lotte'
+				},
+				{
+					img: require('@/assets/img/ss_grey_70.png'),
+					imgAlt: '삼성생명'
+				},
 			]
 		}
 	}
@@ -68,6 +79,9 @@ export default {
 }
 .clientsItem.content {
 	flex: 1;
+}
+.clientsListItems.ifWidth1800px {
+	display: none
 }
 .clientsListItems {
 	width:33.3332%;
@@ -93,5 +107,37 @@ export default {
 .btnWrap span {
 	color:#777;
 	margin-right: 10px
+}
+@media screen and (max-width:1260px) {
+	.clientsWrap {
+		margin-bottom:70px
+	}
+	.clientsItemWrap {
+		display: block
+	}
+	.clientsItem.titleWrap {
+		width:100%;
+		margin-bottom:2.5vw;
+	}
+	.subTitle {
+		white-space: pre-wrap; 
+	}
+	.clientsListItems {
+		height: calc(16.5vw - 1.25vw);
+	}
+}
+@media screen and (min-width:1921px){
+	.clientsListItems.ifWidth1800px {
+		display: block
+	}
+	.clientsListItems {
+		width:25%
+	}
+	.clientsListItems img {
+		max-width:230px
+	}
+	.subTitle {
+		white-space: pre-wrap; 
+	}
 }
 </style>

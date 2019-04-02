@@ -64,3 +64,11 @@ a {
 	color:rgba(0,0,0,0.6);
 	margin-bottom:5px
 }
+@media screen and (min-width:100px){
+	.clientsListItems.ifWidth1800px {
+		display: block
+	}
+	.clientsListItems {
+		width:20%
+	}
+}
