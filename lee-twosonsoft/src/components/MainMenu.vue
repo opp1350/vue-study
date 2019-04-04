@@ -6,7 +6,7 @@
 				<img src="../assets/img/mainLogoBlack.png" alt="twosonsoft" class="black">
 			</h1>
 			<ul>
-				<li v-for="el in items" :key="el.key"><a href="#none">{{ el.li }}</a></li>
+				<li v-for="el in items" :key="el.key"><a href="#none">{{ el.li }}<span class="bar"></span></a></li>
 			</ul>
 		</div>
 	</div>
@@ -93,11 +93,21 @@ li:last-child {
 }
 .gnb a {
 	font-weight: 300;
-	color: rgba(255,255,255,0.6);
-	text-decoration: none;
-	transition: 0.3s all
-}
-.gnb a:hover {
 	color: rgba(255,255,255,1);
+	text-decoration: none;
+	transition: 0.3s all;
+	position:relative
 }
+.gnb .bar {
+	content: "";
+	position: absolute;
+	height:1px;
+	width:0;
+	bottom:0;
+	border-bottom: 1px solid #fff;
+	left:1px
+}
+/* .gnb a:hover {
+	color: rgba(255,255,255,1);
+} */
 </style>
